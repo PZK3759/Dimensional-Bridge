@@ -1,3 +1,4 @@
+import 'package:dimensional_bridge/Global.dart';
 import 'package:flutter/material.dart';
 
 class AppbarWidget extends StatefulWidget implements PreferredSizeWidget {
@@ -11,6 +12,8 @@ class AppbarWidget extends StatefulWidget implements PreferredSizeWidget {
 class _AppbarWidgetState extends State<AppbarWidget> {
   @override
   Widget build(BuildContext context) {
-    return AppBar(title: Text("Dimensional-Bridge"),);
+    return AppBar(
+      backgroundColor: primaryColor,
+      title: Text("Dimensional-Bridge"),);
   }
 }

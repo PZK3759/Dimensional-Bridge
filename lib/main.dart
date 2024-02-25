@@ -1,3 +1,4 @@
+import 'package:dimensional_bridge/Global.dart';
 import 'package:dimensional_bridge/Screens/SplashScreen.dart';
 import 'package:flutter/material.dart';
 
@@ -11,7 +12,10 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
+    return MaterialApp(
+      theme: ThemeData(
+        primaryColor: primaryColor,
+      ),
       home: SplashScreen(),
     );
   }
