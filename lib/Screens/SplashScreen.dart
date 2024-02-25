@@ -1,4 +1,5 @@
 import 'package:dimensional_bridge/Global.dart';
+import 'package:dimensional_bridge/Screens/HomePage.dart';
 import 'package:dimensional_bridge/Screens/OverToNether.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_spinkit/flutter_spinkit.dart';
@@ -35,7 +36,7 @@ class _SplashScreenState extends State<SplashScreen> {
   void loadApp(){
 
     Future.delayed(Duration(seconds: 5),(){
-      Navigator.pushReplacement(context, MaterialPageRoute(builder: (_) => OverToNether()));
+      Navigator.pushReplacement(context, MaterialPageRoute(builder: (_) => HomePage(0)));
     });
 
   }

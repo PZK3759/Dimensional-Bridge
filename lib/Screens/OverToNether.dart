@@ -1,11 +1,7 @@
-import 'package:dimensional_bridge/Global.dart';
-import 'package:dimensional_bridge/Widgets/AppbarWidget.dart';
-import 'package:dimensional_bridge/Widgets/CustomButton.dart';
-import 'package:dimensional_bridge/Widgets/CustomTextField.dart';
-import 'package:dimensional_bridge/Widgets/NavigationDrawerWidget.dart';
 import 'package:flutter/material.dart';
-import 'package:dimensional_bridge/Widgets/AppbarWidget.dart';
-import 'package:flutter_svg/flutter_svg.dart';
+
+import '../Widgets/CustomButton.dart';
+import '../Widgets/CustomTextField.dart';
 
 class OverToNether extends StatefulWidget {
   const OverToNether({super.key});
@@ -15,6 +11,7 @@ class OverToNether extends StatefulWidget {
 }
 
 class _OverToNetherState extends State<OverToNether> {
+
 
   TextEditingController overWorld_X_Controller = TextEditingController();
   TextEditingController overWorld_Y_Controller = TextEditingController();
@@ -33,11 +30,10 @@ class _OverToNetherState extends State<OverToNether> {
   String nether_Y = "";
   String nether_Z = "";
 
+
   @override
   Widget build(BuildContext context) {
     return SafeArea(child: Scaffold(
-      appBar: AppbarWidget(),
-      drawer: NavigationDrawerWidget(),
       body: Padding(
         padding: const EdgeInsets.all(8.0),
         child: Column(
