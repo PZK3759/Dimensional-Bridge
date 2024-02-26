@@ -1,3 +1,4 @@
+import 'package:dimensional_bridge/Screens/HomePage.dart';
 import 'package:flutter/material.dart';
 
 class NavigationDrawerWidget extends StatefulWidget {
@@ -16,6 +17,9 @@ class _NavigationDrawerWidgetState extends State<NavigationDrawerWidget> {
         children: [
           SizedBox(height: 20,),
           Text("Under-Construction",style: TextStyle(fontSize: 20),),
+          TextButton(onPressed: (){
+            Navigator.pushReplacement(context, MaterialPageRoute(builder: (_) => HomePage(2)));
+          }, child: Text("3Dimensional Distance"))
         ],
       ),
     );
