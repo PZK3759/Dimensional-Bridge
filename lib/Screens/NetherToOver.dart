@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+import '../Global.dart';
 import '../Widgets/CustomButton.dart';
 import '../Widgets/CustomTextField.dart';
 
@@ -38,16 +39,16 @@ class _NetherToOverState extends State<NetherToOver> {
         child: Column(
           children: [
             Row(children: [
-              Text("Nether Coordinates", style: TextStyle(fontSize: 18),),
+              Text("Nether Coordinates", style: TextStyle(fontSize: 18, color: primaryTextColor),),
               Expanded(child: Container()),
               IconButton(onPressed: clearTextFields,
-                  icon: Icon(Icons.clear_outlined)),
+                  icon: Icon(Icons.clear_outlined, color: Colors.white,)),
             ]),
-            CustomTextField(nether_X_Controller, Text("X"), false),
+            CustomTextField(nether_X_Controller, Text("X",style: TextStyle( color: primaryTextColor),), false),
             SizedBox(height: 10,),
-            CustomTextField(nether_Y_Controller, Text("Y"), false),
+            CustomTextField(nether_Y_Controller, Text("Y",style: TextStyle( color: primaryTextColor)), false),
             SizedBox(height: 10,),
-            CustomTextField(nether_Z_Controller, Text("Z"), false),
+            CustomTextField(nether_Z_Controller, Text("Z",style: TextStyle( color: primaryTextColor)), false),
             SizedBox(height: 50,),
             SizedBox(
               width: double.infinity,
@@ -55,15 +56,15 @@ class _NetherToOverState extends State<NetherToOver> {
             ),
             SizedBox(height: 50,),
             Row(children: [
-              Text("OverWorld Coordinates", style: TextStyle(fontSize: 18),),
+              Text("OverWorld Coordinates", style: TextStyle(fontSize: 18, color: primaryTextColor),),
               Expanded(child: Container()),
             ]),
             SizedBox(height: 15,),
-            CustomTextField(overWorld_X_Controller, Text("X"), true),
+            CustomTextField(overWorld_X_Controller, Text("X",style: TextStyle( color: primaryTextColor)), true),
             SizedBox(height: 10,),
-            CustomTextField(overWorld_Y_Controller, Text("Y"), true),
+            CustomTextField(overWorld_Y_Controller, Text("Y",style: TextStyle( color: primaryTextColor)), true),
             SizedBox(height: 10,),
-            CustomTextField(overWorld_Z_Controller, Text("Z"), true),
+            CustomTextField(overWorld_Z_Controller, Text("Z",style: TextStyle( color: primaryTextColor)), true),
           ],
         ),
       ),

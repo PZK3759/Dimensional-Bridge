@@ -34,27 +34,27 @@ class _ThreeDimensionalDistanceState extends State<ThreeDimensionalDistance> {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              Center(child: Text("3Dimensional Distance", style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold, color: secondaryColor),)),
+              Center(child: Text("3Dimensional Distance", style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold, color: primaryTextColor),)),
               const SizedBox(height: 10,),
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  Expanded(child: CustomTextField(x1_Controller, Text("X1"), false)),
+                  Expanded(child: CustomTextField(x1_Controller, Text("X1",style: TextStyle( color: primaryTextColor)), false)),
                   const SizedBox(width: 3,),
-                  Expanded(child: CustomTextField(y1_Controller, Text("Y1"), false)),
+                  Expanded(child: CustomTextField(y1_Controller, Text("Y1",style: TextStyle( color: primaryTextColor)), false)),
                   const SizedBox(width: 3,),
-                  Expanded(child: CustomTextField(z1_Controller, Text("Z1"), false)),
+                  Expanded(child: CustomTextField(z1_Controller, Text("Z1",style: TextStyle( color: primaryTextColor)), false)),
                 ],
               ),
               const SizedBox(height: 5,),
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  Expanded(child: CustomTextField(x2_Controller, Text("X2"), false)),
+                  Expanded(child: CustomTextField(x2_Controller, Text("X2",style: TextStyle( color: primaryTextColor)), false)),
                   const SizedBox(width: 3,),
-                  Expanded(child: CustomTextField(y2_Controller, Text("Y2"), false)),
+                  Expanded(child: CustomTextField(y2_Controller, Text("Y2",style: TextStyle( color: primaryTextColor)), false)),
                   const SizedBox(width: 3,),
-                  Expanded(child: CustomTextField(z2_Controller, Text("Z2"), false)),
+                  Expanded(child: CustomTextField(z2_Controller, Text("Z2",style: TextStyle( color: primaryTextColor)), false)),
                 ],
               ),
               const SizedBox(height: 10,),
@@ -65,14 +65,14 @@ class _ThreeDimensionalDistanceState extends State<ThreeDimensionalDistance> {
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  Text("Distance: ", style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold, color: secondaryColor),),
-                  IconButton(onPressed: clearTextFields, icon: Icon(Icons.clear))
+                  Text("Distance: ", style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold, color: primaryTextColor),),
+                  IconButton(onPressed: clearTextFields, icon: Icon(Icons.clear, color: Colors.white,))
                 ],
               ),
               
               
               const SizedBox(height: 5,),
-              CustomTextField(distanceController, Text("Distance"), true)
+              CustomTextField(distanceController, Text("Distance",style: TextStyle( color: primaryTextColor)), true)
 
             ],
           ),

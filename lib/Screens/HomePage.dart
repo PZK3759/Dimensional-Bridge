@@ -20,12 +20,7 @@ class HomePage extends StatefulWidget {
 class _HomePageState extends State<HomePage> {
 
 
-
-  final screens = [
-    OverToNether(),
-    NetherToOver(),
-    ThreeDimensionalDistance()
-  ];
+  PageController pageController = PageController(initialPage: 0);
 
   @override
   Widget build(BuildContext context) {
@@ -46,10 +41,24 @@ class _HomePageState extends State<HomePage> {
           onTap: (index){
             setState(() {
               widget.currentIndex = index;
+              pageController.animateToPage(index, duration: Duration(seconds: 1), curve: Curves.easeInOut);
             });
           },
         ),
-        body: screens[widget.currentIndex],
+        body: PageView(
+          onPageChanged: (index){
+            widget.currentIndex = index;
+            setState(() {
+
+            });
+          },
+          controller: pageController,
+          children: [
+            OverToNether(),
+            NetherToOver(),
+            ThreeDimensionalDistance(),
+          ],
+        ),
     ));
   }
 

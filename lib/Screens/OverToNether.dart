@@ -1,3 +1,4 @@
+import 'package:dimensional_bridge/Global.dart';
 import 'package:flutter/material.dart';
 
 import '../Widgets/CustomButton.dart';
@@ -39,16 +40,16 @@ class _OverToNetherState extends State<OverToNether> {
         child: Column(
           children: [
             Row(children: [
-              Text("Overworld Coordinates", style: TextStyle(fontSize: 18),),
+              Text("Overworld Coordinates", style: TextStyle(fontSize: 18,color: primaryTextColor),),
               Expanded(child: Container()),
               IconButton(onPressed: clearTextFields,
-                  icon: Icon(Icons.clear_outlined)),
+                  icon: Icon(Icons.clear_outlined,color: Colors.white,)),
             ]),
-            CustomTextField(overWorld_X_Controller, Text("X"), false),
+            CustomTextField(overWorld_X_Controller, Text("X",style: TextStyle( color: primaryTextColor)), false),
             SizedBox(height: 10,),
-            CustomTextField(overWorld_Y_Controller, Text("Y"), false),
+            CustomTextField(overWorld_Y_Controller, Text("Y",style: TextStyle( color: primaryTextColor)), false),
             SizedBox(height: 10,),
-            CustomTextField(overWorld_Z_Controller, Text("Z"), false),
+            CustomTextField(overWorld_Z_Controller, Text("Z",style: TextStyle( color: primaryTextColor)), false),
             SizedBox(height: 50,),
             SizedBox(
               width: double.infinity,
@@ -56,15 +57,15 @@ class _OverToNetherState extends State<OverToNether> {
             ),
             SizedBox(height: 50,),
             Row(children: [
-              Text("Nether Coordinates", style: TextStyle(fontSize: 18),),
+              Text("Nether Coordinates", style: TextStyle(fontSize: 18,color: primaryTextColor),),
               Expanded(child: Container()),
             ]),
             SizedBox(height: 15,),
-            CustomTextField(nether_X_Controller, Text("X"), true),
+            CustomTextField(nether_X_Controller, Text("X",style: TextStyle( color: primaryTextColor)), true),
             SizedBox(height: 10,),
-            CustomTextField(nether_Y_Controller, Text("Y"), true),
+            CustomTextField(nether_Y_Controller, Text("Y",style: TextStyle( color: primaryTextColor)), true),
             SizedBox(height: 10,),
-            CustomTextField(nether_Z_Controller, Text("Z"), true),
+            CustomTextField(nether_Z_Controller, Text("Z",style: TextStyle( color: primaryTextColor)), true),
           ],
         ),
       ),

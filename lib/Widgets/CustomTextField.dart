@@ -10,6 +10,7 @@ Widget CustomTextField(
 
 ){
   return TextField(
+    style: TextStyle(color: primaryTextColor),
     controller: controller,
     readOnly: readOnly,
     keyboardType: TextInputType.number,

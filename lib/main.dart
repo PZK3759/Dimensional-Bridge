@@ -15,6 +15,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       theme: ThemeData(
         primaryColor: primaryColor,
+        scaffoldBackgroundColor: Color(0xff401828)
       ),
       home: SplashScreen(),
     );
