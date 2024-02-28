@@ -19,7 +19,7 @@ class _NavigationDrawerWidgetState extends State<NavigationDrawerWidget> {
           SizedBox(height: 20,),
           Text("Under-Construction",style: TextStyle(fontSize: 20),),
           TextButton(onPressed: (){
-            Navigator.pushReplacement(context, MaterialPageRoute(builder: (_) => AboutPage()));
+            Navigator.push(context, MaterialPageRoute(builder: (_) => AboutPage()));
           }, child: Text("About"))
         ],
       ),
