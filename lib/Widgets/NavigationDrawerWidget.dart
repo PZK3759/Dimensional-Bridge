@@ -14,15 +14,53 @@ class _NavigationDrawerWidgetState extends State<NavigationDrawerWidget> {
   Widget build(BuildContext context) {
     return Drawer(
       width: MediaQuery.of(context).size.width*0.75,
-      child: Column(
-        children: [
-          SizedBox(height: 20,),
-          Text("Under-Construction",style: TextStyle(fontSize: 20),),
-          TextButton(onPressed: (){
-            Navigator.push(context, MaterialPageRoute(builder: (_) => AboutPage()));
-          }, child: Text("About"))
-        ],
+      child: Padding(
+        padding: const EdgeInsets.all(15.0),
+        child: Column(
+          children: [
+            const SizedBox(height: 20,),
+            const Text("Under-Construction",style: TextStyle(fontSize: 20),),
+
+            const Divider(color: Colors.black,),
+
+            ListTile(
+              leading: const Icon(Icons.multiple_stop),
+              title: const Text("Calculate Nether", style: TextStyle(fontSize: 18),),
+              onTap: (){
+                Navigator.pop(context);
+                Navigator.push(context, MaterialPageRoute(builder: (context) => HomePage(0)));
+              },
+            ),
+            ListTile(
+              leading: const Icon(Icons.multitrack_audio),
+              title: const Text("Calculate Overworld", style: TextStyle(fontSize: 18),),
+              onTap: (){
+                Navigator.pop(context);
+                Navigator.push(context, MaterialPageRoute(builder: (context) => HomePage(1)));
+              },
+            ),
+            ListTile(
+              leading: const Icon(Icons.cable),
+              title: const Text("Calculate Distance", style: TextStyle(fontSize: 18),),
+              onTap: (){
+                Navigator.pop(context);
+                Navigator.push(context, MaterialPageRoute(builder: (context) => HomePage(2)));
+              },
+            ),
+
+            const Divider(color: Colors.black,),
+            ListTile(
+              leading: const Icon(Icons.warning_outlined),
+              title: const Text("About", style: TextStyle(fontSize: 18),),
+              onTap: (){
+                Navigator.pop(context);
+                Navigator.push(context, MaterialPageRoute(builder: (context) => AboutPage()));
+              },
+            )
+          ],
+        ),
       ),
     );
   }
+
 }
