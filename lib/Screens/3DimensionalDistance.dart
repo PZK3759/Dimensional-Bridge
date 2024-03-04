@@ -101,17 +101,7 @@ class _ThreeDimensionalDistanceState extends State<ThreeDimensionalDistance> {
     double y2 = double.parse(y2_Controller.text);
     double z2 = double.parse(z2_Controller.text);
 
-    double dx = x1 - x2;
-    double dy = y1 - y2;
-    double dz = z1 - z2;
-
-    double dx_squared = dx*dx;
-    double dy_squared = dy*dy;
-    double dz_squared = dz*dz;
-
-    double sum_of_squares = dx_squared+dy_squared+dz_squared;
-
-    double distance = sqrt(sum_of_squares);
+    double distance = sqrt((x1 - x2)*(x1 - x2) + (y1 - y2)*(y1 - y2) + (z1 - z2)*(z1 - z2));
 
     distanceController.text = distance.toString();
 
